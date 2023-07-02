@@ -55,12 +55,14 @@ class _HomePageState extends State<HomePage> {
         ),
         titleSpacing: 0,
         leadingWidth: size.width * 0.15,
-        title: Image.asset(
-          isDarkMode
-              ? 'assets/SobGOGlight.png' //logo image
-              : 'assets/SobGOGdark.png',
-          height: size.height * 0.06,
-          width: size.width * 0.35,
+        title: Padding(
+          padding: const EdgeInsets.only(top: 5),
+          child: Image.asset(
+            isDarkMode
+                ? 'assets/app_logo.png' //logo image
+                : 'assets/app_logo.png',
+            width: size.width * 0.5,
+          ),
         ),
         centerTitle: true,
         actions: <Widget>[

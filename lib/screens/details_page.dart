@@ -138,7 +138,8 @@ class _DetailsPageState extends State<DetailsPage> {
                                     if (loadingProgress == null) {
                                       return Image.network(
                                         widget.image,
-                                        width: size.width * 0.52,
+                                        width: size.width * 0.3,
+                                        fit: BoxFit.cover,
                                       );
                                     } else {
                                       return const CircularProgressIndicator
@@ -153,7 +154,6 @@ class _DetailsPageState extends State<DetailsPage> {
                                     return const CircularProgressIndicator
                                         .adaptive();
                                   },
-                                  width: size.width * 0.4,
                                 )
                               : Transform(
                                   alignment: Alignment.center,
@@ -196,7 +196,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                 ),
                               ),
                               Text(
-                                "${widget.price}\$".toString(),
+                                "₹ ${widget.price}".toString(),
                                 style: GoogleFonts.lato(
                                   fontSize: size.width * 0.036,
                                   fontWeight: FontWeight.bold,

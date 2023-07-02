@@ -1,92 +1,105 @@
 List<Map> shoes = [
   {
-    'name': 'New Balance NB 999',
-    'userName': 'Vasquez Novashenko',
-    'userFollowers': 160,
-    'description': 'ML999AA',
-    'price': 145,
-    'size': 45,
-    'isRotated': true,
-    'userImage':
-        'https://cdn.discordapp.com/attachments/598981098546003981/936537845387104256/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg',
-    'image':
-        'https://cdn.discordapp.com/attachments/598981098546003981/936356078541734038/ML999AA_ffa9e4a6-abc6-45aa-9b87-78fe7e680cdf_2048x-removebg-preview__1_-removebg-preview.png'
-  },
-  {
-    'name': 'New Balance 990',
-    'userName': 'Gavril Novashenko',
+    'name': 'Puma X One8',
+    'userName': 'Virat Kohli',
     'userFollowers': 400,
     'description': 'M990DSAO',
-    'price': 219,
+    'price': 4849,
     'size': 41,
     'isRotated': true,
     'userImage':
-        'https://cdn.discordapp.com/attachments/896076151150223462/936540367363395584/360_F_294621430_9dwIpCeY1LqefWCcU23pP9i11BgzOS0N.jpg',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpa0QBQ9-sYDLtn2f6__6372F7DJCf_2-HJw&usqp=CAU',
     'image':
-        'https://cdn.discordapp.com/attachments/896076151150223462/936540227189760020/M990DSAO_2048x-removebg-preview_1.png'
+        'https://images.jdmagicbox.com/quickquotes/images_main/puma-men-footwear-22-06-2021-1200-231379828-k0a6g.jpg'
+  },
+  {
+    'name': 'ADIDAS ADIFOM Q',
+    'userName': 'Mary Kom',
+    'userFollowers': 160,
+    'description': 'ML999AA',
+    'price': 16000,
+    'size': 45,
+    'isRotated': true,
+    'userImage':
+        'https://c.ndtvimg.com/2020-04/mogp7as_mary-kom-afp_625x300_27_April_20.jpg',
+    'image':
+        'https://crepdogcrew.com/cdn/shop/products/adidasadiFOMQcarbon_1400x.jpg?v=1671624143'
+  },
+  {
+    'name': 'Puma X One8',
+    'userName': 'Virat Kohli',
+    'userFollowers': 400,
+    'description': 'M990DSAO',
+    'price': 4849,
+    'size': 41,
+    'isRotated': true,
+    'userImage':
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpa0QBQ9-sYDLtn2f6__6372F7DJCf_2-HJw&usqp=CAU',
+    'image':
+        'https://images.jdmagicbox.com/quickquotes/images_main/puma-men-footwear-22-06-2021-1200-231379828-k0a6g.jpg'
   },
   {
     'name': 'Adidas Originals Zx 700',
-    'userName': 'Matthew Hederson',
+    'userName': 'PV Sindhu',
     'userFollowers': 1200,
     'description': 'HDFY0-996',
-    'price': 129,
+    'price': 1297,
     'size': 37,
     'isRotated': true,
     'userImage':
-        'https://cdn.discordapp.com/attachments/896076151150223462/936670183110606918/portrait-asian-business-man-business-district-senior-visionary-executives-leader-with-business-visionled-phone-computer-hand-lifestyle-business-people-concept_1150-34757.jpg',
+        'https://img.mensxp.com/media/content/2022/Jul/Actresses-Who-Can-Play-PV-Sindhu-In-Her-Biopic1400_62d561919c6f1.jpeg',
     'image':
         'https://cdn.discordapp.com/attachments/598981098546003981/936370361593905212/FY0996_2048x-removebg-preview_1.png'
   },
   {
     'name': 'Nike Air Jordan 34',
-    'userName': 'Andrew Williams',
+    'userName': 'Neeraj Chopra',
     'userFollowers': 55,
     'description': 'BQ3381-016',
-    'price': 298,
+    'price': 2984,
     'size': 40,
     'isRotated': true,
     'userImage':
-        'https://cdn.discordapp.com/attachments/598981098546003981/936537845106094140/istockphoto-1180616266-612x612.jpg',
+        'https://img.republicworld.com/republic-prod/stories/promolarge/xhdpi/svtxxzzktzhfcmpw_1628392826.jpeg?tr=w-1200,h-900',
     'image':
         'https://cdn.discordapp.com/attachments/598981098546003981/936369178275885056/BQ3381-016_2048x-removebg-preview_1.png'
   },
   {
     'name': 'Nike Air Jordan 3 Retro',
-    'userName': 'Liam Jones',
+    'userName': 'M.S. Dhoni',
     'userFollowers': 64,
     'description': '136064-123',
-    'price': 506,
+    'price': 5069,
     'size': 39,
     'isRotated': true,
     'userImage':
-        'https://cdn.discordapp.com/attachments/598981098546003981/936537844833484810/images.jpg',
+        'https://bcciplayerimages.s3.ap-south-1.amazonaws.com/ipl/IPLHeadshot2023/57.png',
     'image':
         'https://cdn.discordapp.com/attachments/598981098546003981/936368519275229285/136064-123_2048x__1_-removebg-preview_1.png'
   },
   {
     'name': 'Nike Air Zoom Vomero 14',
-    'userName': 'Mia Smith',
+    'userName': 'Sachin Tendulkar',
     'userFollowers': 71,
     'description': 'AH7857-402',
-    'price': 161,
+    'price': 1619,
     'size': 42,
     'isRotated': true,
     'userImage':
-        'https://cdn.discordapp.com/attachments/598981098546003981/936537844527267840/istockphoto-1277996375-612x612.jpg',
+        'https://images.news18.com/ibnlive/uploads/2021/08/sachin-tendulkar-52.jpg',
     'image':
         'https://cdn.discordapp.com/attachments/598981098546003981/936371027972349952/AH7857-402_2048x-removebg-preview_1.png'
   },
   {
     'name': 'Nike Air Jordan XXXII',
-    'userName': 'Nicole Wagner',
+    'userName': 'Sunil Chhetri',
     'userFollowers': 92,
     'description': 'AJ6333-042',
-    'price': 425,
+    'price': 4254,
     'size': 41,
     'isRotated': true,
     'userImage':
-        'https://cdn.discordapp.com/attachments/598981098546003981/936537844263047178/pfps-lady-pfp-Favim.com-6174446.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/8/8d/Sunil_Chhetri_Indian_Football_Player.jpg',
     'image':
         'https://cdn.discordapp.com/attachments/598981098546003981/936342654797619280/AJ6333-042_2048x-removebg-preview.png'
   }

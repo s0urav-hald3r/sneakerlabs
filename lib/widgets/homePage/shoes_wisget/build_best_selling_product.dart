@@ -54,7 +54,8 @@ Padding buildBestSellingProduct(Size size, bool isDarkMode) {
                     if (loadingProgress == null) {
                       return Image.network(
                         shoes[5]['image'],
-                        width: size.width * 0.4,
+                        width: size.width * 0.3,
+                        fit: BoxFit.cover,
                       );
                     } else {
                       return const CircularProgressIndicator.adaptive();
@@ -63,7 +64,6 @@ Padding buildBestSellingProduct(Size size, bool isDarkMode) {
                   errorBuilder: (context, error, stackTrace) {
                     return const CircularProgressIndicator.adaptive();
                   },
-                  width: size.width * 0.4,
                 ),
               ),
               const Spacer(),
@@ -85,7 +85,7 @@ Padding buildBestSellingProduct(Size size, bool isDarkMode) {
                         ),
                       ),
                       Text(
-                        "${shoes[5]['price']}\$".toString(),
+                        "₹ ${shoes[5]['price']}".toString(),
                         style: GoogleFonts.lato(
                           fontSize: size.width * 0.036,
                           fontWeight: FontWeight.bold,

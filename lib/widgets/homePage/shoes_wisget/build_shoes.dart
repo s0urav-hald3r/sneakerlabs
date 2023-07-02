@@ -100,7 +100,7 @@ Padding buildShoes(Size size, bool isDarkMode, int i) {
                 child: Column(
                   children: [
                     Text(
-                      "${shoes[i]['price']}\$".toString(),
+                      "₹ ${shoes[i]['price']}".toString(),
                       textAlign: TextAlign.left,
                       style: GoogleFonts.lato(
                         fontSize: size.width * 0.035,

@@ -3,9 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 _launchURL() async {
-  const url = 'https://www.linkedin.com/in/jakubsobanski/';
-  if (await canLaunch(url)) {
-    await launch(url);
+  const url = 'https://www.flipkart.com/';
+  if (!await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication)) {
   } else {
     throw 'Could not launch $url';
   }
