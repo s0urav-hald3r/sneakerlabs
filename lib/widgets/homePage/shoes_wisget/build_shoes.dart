@@ -22,19 +22,7 @@ Padding buildShoes(Size size, bool isDarkMode, int i) {
       ),
       child: InkWell(
         onTap: () {
-          Get.to(
-            DetailsPage(
-              name: shoes[i]['name'],
-              userName: shoes[i]['userName'],
-              userFollowers: shoes[i]['userFollowers'],
-              description: shoes[i]['description'],
-              price: shoes[i]['price'],
-              size: shoes[i]['size'],
-              isRotated: shoes[i]['isRotated'],
-              userImage: shoes[i]['userImage'],
-              image: shoes[i]['image'],
-            ),
-          );
+          Get.to(DetailsPage(productModel: shoes[i]));
         },
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -42,9 +30,9 @@ Padding buildShoes(Size size, bool isDarkMode, int i) {
           ),
           child: Row(
             children: [
-              shoes[i]['isRotated']
+              shoes[i].isRotated
                   ? Image.network(
-                      shoes[i]['image'],
+                      shoes[i].image,
                       errorBuilder: (context, error, stackTrace) {
                         return const CircularProgressIndicator.adaptive();
                       },
@@ -54,7 +42,7 @@ Padding buildShoes(Size size, bool isDarkMode, int i) {
                       alignment: Alignment.center,
                       transform: Matrix4.rotationY(pi),
                       child: Image.network(
-                        shoes[i]['image'],
+                        shoes[i].image,
                         errorBuilder: (context, error, stackTrace) {
                           return const CircularProgressIndicator.adaptive();
                         },
@@ -70,7 +58,7 @@ Padding buildShoes(Size size, bool isDarkMode, int i) {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      shoes[i]['name'],
+                      shoes[i].name,
                       textAlign: TextAlign.left,
                       style: GoogleFonts.lato(
                         fontSize: size.width * 0.035,
@@ -79,7 +67,7 @@ Padding buildShoes(Size size, bool isDarkMode, int i) {
                       ),
                     ),
                     Text(
-                      shoes[i]['description'],
+                      shoes[i].description,
                       textAlign: TextAlign.left,
                       style: GoogleFonts.lato(
                         fontSize: size.width * 0.03,
@@ -100,7 +88,7 @@ Padding buildShoes(Size size, bool isDarkMode, int i) {
                 child: Column(
                   children: [
                     Text(
-                      "₹ ${shoes[i]['price']}".toString(),
+                      "₹ ${shoes[i].price}".toString(),
                       textAlign: TextAlign.left,
                       style: GoogleFonts.lato(
                         fontSize: size.width * 0.035,
@@ -109,7 +97,7 @@ Padding buildShoes(Size size, bool isDarkMode, int i) {
                       ),
                     ),
                     Text(
-                      "EU ${shoes[i]['size']}".toString(),
+                      "EU ${shoes[i].size}".toString(),
                       textAlign: TextAlign.left,
                       style: GoogleFonts.lato(
                         fontSize: size.width * 0.03,

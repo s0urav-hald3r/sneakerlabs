@@ -22,17 +22,7 @@ Padding buildBestSellingProduct(Size size, bool isDarkMode) {
       child: InkWell(
         onTap: () {
           Get.to(
-            DetailsPage(
-              name: shoes[5]['name'],
-              userName: shoes[5]['userName'],
-              userFollowers: shoes[5]['userFollowers'],
-              description: shoes[5]['description'],
-              price: shoes[5]['price'],
-              size: shoes[5]['size'],
-              isRotated: shoes[5]['isRotated'],
-              userImage: shoes[5]['userImage'],
-              image: shoes[5]['image'],
-            ),
+            DetailsPage(productModel: shoes[5]),
           );
         },
         child: Align(
@@ -45,7 +35,7 @@ Padding buildBestSellingProduct(Size size, bool isDarkMode) {
                   horizontal: size.width * 0.025,
                 ),
                 child: Image.network(
-                  shoes[5]['image'],
+                  shoes[5].image,
                   loadingBuilder: (
                     context,
                     child,
@@ -53,7 +43,7 @@ Padding buildBestSellingProduct(Size size, bool isDarkMode) {
                   ) {
                     if (loadingProgress == null) {
                       return Image.network(
-                        shoes[5]['image'],
+                        shoes[5].image,
                         width: size.width * 0.3,
                         fit: BoxFit.cover,
                       );
@@ -77,7 +67,7 @@ Padding buildBestSellingProduct(Size size, bool isDarkMode) {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        shoes[5]['name'],
+                        shoes[5].name,
                         style: GoogleFonts.lato(
                           fontSize: size.width * 0.036,
                           fontWeight: FontWeight.bold,
@@ -85,7 +75,7 @@ Padding buildBestSellingProduct(Size size, bool isDarkMode) {
                         ),
                       ),
                       Text(
-                        "₹ ${shoes[5]['price']}".toString(),
+                        "₹ ${shoes[5].price}".toString(),
                         style: GoogleFonts.lato(
                           fontSize: size.width * 0.036,
                           fontWeight: FontWeight.bold,
@@ -106,7 +96,7 @@ Padding buildBestSellingProduct(Size size, bool isDarkMode) {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        shoes[5]['description'],
+                        shoes[5].description,
                         style: GoogleFonts.lato(
                           fontSize: size.width * 0.03,
                           color: isDarkMode
@@ -115,7 +105,7 @@ Padding buildBestSellingProduct(Size size, bool isDarkMode) {
                         ),
                       ),
                       Text(
-                        "EU ${shoes[5]['size']}",
+                        "EU ${shoes[5].size}",
                         style: GoogleFonts.lato(
                           fontSize: size.width * 0.03,
                           color: isDarkMode

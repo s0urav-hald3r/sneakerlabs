@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sneakerlabs/models/product.dart';
 import 'package:unicons/unicons.dart';
 import 'package:get/get.dart';
 
@@ -10,28 +11,9 @@ import '../widgets/detailsPage/build_follow_button.dart';
 import '../widgets/homePage/shoes_wisget/build_shoes.dart';
 
 class DetailsPage extends StatefulWidget {
-  final String name;
-  final String userName;
-  final int userFollowers;
-  final String description;
-  final int price;
-  final int size;
-  final bool isRotated;
-  final String userImage;
-  final String image;
+  final ProductModel productModel;
 
-  const DetailsPage({
-    Key? key,
-    required this.name,
-    required this.userName,
-    required this.userFollowers,
-    required this.description,
-    required this.price,
-    required this.size,
-    required this.isRotated,
-    required this.userImage,
-    required this.image,
-  }) : super(key: key);
+  const DetailsPage({Key? key, required this.productModel}) : super(key: key);
 
   @override
   State<DetailsPage> createState() => _DetailsPageState();
@@ -88,7 +70,7 @@ class _DetailsPageState extends State<DetailsPage> {
               right: size.width * 0.1,
             ),
             child: Text(
-              widget.name,
+              widget.productModel.name,
               style: GoogleFonts.lato(
                 fontSize: size.width * 0.045,
                 color: isDarkMode ? Colors.white : Colors.black,
@@ -97,6 +79,34 @@ class _DetailsPageState extends State<DetailsPage> {
             ),
           ),
         ),
+        actions: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(
+              right: size.width * 0.05,
+            ),
+            child: SizedBox(
+              height: size.width * 0.1,
+              width: size.width * 0.1,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: isDarkMode
+                      ? const Color(0xff0f0f0f) //bd color
+                      : const Color(0xffebebeb),
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(10),
+                  ),
+                ),
+                child: Icon(
+                  UniconsLine.shopping_cart_alt,
+                  color: isDarkMode
+                      ? Colors.white //icon color
+                      : const Color(0xff3b22a1),
+                  size: size.height * 0.028,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       body: Container(
         decoration: BoxDecoration(
@@ -127,9 +137,9 @@ class _DetailsPageState extends State<DetailsPage> {
                           padding: EdgeInsets.only(
                             top: size.height * 0.035,
                           ),
-                          child: widget.isRotated
+                          child: widget.productModel.isRotated
                               ? Image.network(
-                                  widget.image,
+                                  widget.productModel.image,
                                   loadingBuilder: (
                                     context,
                                     child,
@@ -137,7 +147,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                   ) {
                                     if (loadingProgress == null) {
                                       return Image.network(
-                                        widget.image,
+                                        widget.productModel.image,
                                         width: size.width * 0.3,
                                         fit: BoxFit.cover,
                                       );
@@ -159,12 +169,12 @@ class _DetailsPageState extends State<DetailsPage> {
                                   alignment: Alignment.center,
                                   transform: Matrix4.rotationY(pi),
                                   child: Image.network(
-                                    widget.image,
+                                    widget.productModel.image,
                                     loadingBuilder:
                                         (context, child, loadingProgress) {
                                       if (loadingProgress == null) {
                                         return Image.network(
-                                          widget.image,
+                                          widget.productModel.image,
                                           width: size.width * 0.52,
                                         );
                                       } else {
@@ -187,7 +197,7 @@ class _DetailsPageState extends State<DetailsPage> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
-                                widget.name,
+                                widget.productModel.name,
                                 style: GoogleFonts.lato(
                                   fontSize: size.width * 0.036,
                                   fontWeight: FontWeight.bold,
@@ -196,7 +206,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                 ),
                               ),
                               Text(
-                                "₹ ${widget.price}".toString(),
+                                "₹ ${widget.productModel.price}".toString(),
                                 style: GoogleFonts.lato(
                                   fontSize: size.width * 0.036,
                                   fontWeight: FontWeight.bold,
@@ -217,7 +227,7 @@ class _DetailsPageState extends State<DetailsPage> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  widget.description,
+                                  widget.productModel.description,
                                   style: GoogleFonts.lato(
                                     fontSize: size.width * 0.03,
                                     color: isDarkMode
@@ -226,7 +236,7 @@ class _DetailsPageState extends State<DetailsPage> {
                                   ),
                                 ),
                                 Text(
-                                  "EU ${widget.size}",
+                                  "EU ${widget.productModel.size}",
                                   style: GoogleFonts.lato(
                                     fontSize: size.width * 0.03,
                                     color: isDarkMode
@@ -263,7 +273,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         ),
                         child: CircleAvatar(
                           foregroundImage: NetworkImage(
-                            widget.userImage,
+                            widget.productModel.userImage,
                           ),
                         ),
                       ),
@@ -275,7 +285,7 @@ class _DetailsPageState extends State<DetailsPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              widget.userName,
+                              widget.productModel.userName,
                               style: GoogleFonts.lato(
                                 fontSize: size.width * 0.035,
                                 fontWeight: FontWeight.bold,
@@ -283,7 +293,7 @@ class _DetailsPageState extends State<DetailsPage> {
                               ),
                             ),
                             Text(
-                              "Followers ${widget.userFollowers}",
+                              "Followers ${widget.productModel.userFollowers}",
                               style: GoogleFonts.lato(
                                 fontSize: size.width * 0.03,
                                 color: isDarkMode
