@@ -1,7 +1,9 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sneakerlabs/controller/product_controller.dart';
 import 'package:sneakerlabs/models/product.dart';
+import 'package:sneakerlabs/screens/cart_page.dart';
 import 'package:unicons/unicons.dart';
 import 'package:get/get.dart';
 
@@ -20,6 +22,7 @@ class DetailsPage extends StatefulWidget {
 }
 
 class _DetailsPageState extends State<DetailsPage> {
+  final ProductController _productController = Get.find<ProductController>();
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -80,28 +83,57 @@ class _DetailsPageState extends State<DetailsPage> {
           ),
         ),
         actions: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(
-              right: size.width * 0.05,
-            ),
-            child: SizedBox(
-              height: size.width * 0.1,
-              width: size.width * 0.1,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: isDarkMode
-                      ? const Color(0xff0f0f0f) //bd color
-                      : const Color(0xffebebeb),
-                  borderRadius: const BorderRadius.all(
-                    Radius.circular(10),
+          InkWell(
+            onTap: () => Get.to(const CartPage()),
+            child: Padding(
+              padding: EdgeInsets.only(
+                right: size.width * 0.05,
+              ),
+              child: SizedBox(
+                height: size.width * 0.1,
+                width: size.width * 0.1,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: isDarkMode
+                        ? const Color(0xff0f0f0f) //bd color
+                        : const Color(0xffebebeb),
+                    borderRadius: const BorderRadius.all(
+                      Radius.circular(10),
+                    ),
                   ),
-                ),
-                child: Icon(
-                  UniconsLine.shopping_cart_alt,
-                  color: isDarkMode
-                      ? Colors.white //icon color
-                      : const Color(0xff3b22a1),
-                  size: size.height * 0.028,
+                  child: Center(
+                    child: Stack(
+                      children: [
+                        Icon(
+                          UniconsLine.shopping_cart_alt,
+                          color: isDarkMode
+                              ? Colors.white //icon color
+                              : const Color(0xff3b22a1),
+                          size: size.height * 0.03,
+                        ),
+                        Obx(() => _productController.totalCartItems == 0
+                            ? const SizedBox.shrink()
+                            : Positioned(
+                                right: 0,
+                                top: 0,
+                                child: Container(
+                                  height: size.width * 0.03,
+                                  width: size.width * 0.03,
+                                  decoration: const BoxDecoration(
+                                      color: Colors.redAccent,
+                                      shape: BoxShape.circle),
+                                  child: Center(
+                                    child: Text(
+                                      _productController.totalCartItems
+                                          .toString(),
+                                      style: const TextStyle(fontSize: 8),
+                                    ),
+                                  ),
+                                ),
+                              ))
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -305,7 +337,11 @@ class _DetailsPageState extends State<DetailsPage> {
                         ),
                       ),
                       const Spacer(),
-                      buildFollowButton(size, isDarkMode),
+                      InkWell(
+                          onTap: () {
+                            _productController.addToCart(widget.productModel);
+                          },
+                          child: buildFollowButton(size, isDarkMode)),
                     ],
                   ),
                 ),

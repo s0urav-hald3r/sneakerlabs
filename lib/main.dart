@@ -1,15 +1,16 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:get/get_navigation/src/routes/transitions_type.dart';
+import 'package:get/get.dart';
 import 'package:sneakerlabs/screens/home_page.dart';
+
+import 'controller/product_controller.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitDown,
     DeviceOrientation.portraitUp,
   ]);
+  Get.lazyPut(() => ProductController(), fenix: true);
   runApp(const App());
 }
 
@@ -26,7 +27,7 @@ class _AppState extends State<App> {
       defaultTransition: Transition.rightToLeft,
       transitionDuration: Duration(milliseconds: 500),
       debugShowCheckedModeBanner: false,
-      title: 'Shoes Shop App',
+      title: 'Sneaker Labs',
       home: HomePage(),
     );
   }

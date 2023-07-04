@@ -11,19 +11,11 @@ class ProductController extends GetxController {
 
   removeFromCart(ProductModel productModel) {
     cartItems.remove(productModel);
-    if (cartItems.isEmpty) {
-      Get.back();
-    }
   }
 
   placeOrder() {
     cartItems.clear();
-    Get.back();
-    Get.back();
   }
 
   int get totalCartItems => cartItems.length;
-
-  double get totalCartValue =>
-      cartItems.fold(0, (total, item) => total + item.pAmout!);
 }
