@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "106422961389-kseovrdsf1kmkucqj7kg8d79f5v7g2ts.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sneakerlabs",
+            "certificate_hash": "c5f8d4ff7bfc26d92e43ddb945b3f8a9812559d1"
+          }
+        },
+        {
           "client_id": "106422961389-o8qd3bvvh65uavit2kai1j4kah20j8ep.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
