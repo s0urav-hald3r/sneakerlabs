@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "106422961389",
+    "project_id": "sneakerlabs-18550",
+    "storage_bucket": "sneakerlabs-18550.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106422961389:android:65d649eca6c2e934b2f8e4",
+        "android_client_info": {
+          "package_name": "com.example.sneakerlabs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106422961389-o8qd3bvvh65uavit2kai1j4kah20j8ep.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sneakerlabs",
+            "certificate_hash": "1ea24a30ac8c109142544f57b1561d918a94c513"
+          }
+        },
+        {
+          "client_id": "106422961389-uojn9mo1jdffbss86jsjts1hnu2uaq34.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sneakerlabs",
+            "certificate_hash": "bc4163e70aab24e643ebd3062cf62cb74c93f964"
+          }
+        },
+        {
+          "client_id": "106422961389-fj2s5mkmgas689bvssj6qbch9s5baisf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcA0HdKPj_yb0mVM1zy3O675k3Zdno7gM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106422961389-fj2s5mkmgas689bvssj6qbch9s5baisf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

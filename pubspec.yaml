@@ -40,6 +40,10 @@ dependencies:
   tap_debouncer: ^2.0.1
   flutter_slidable: ^3.0.0
   lottie: ^2.3.2
+  firebase_auth: ^4.6.3
+  firebase_core: ^2.14.0
+  functional_widget_annotation: ^0.10.0
+  gap: ^3.0.1
 
 dev_dependencies:
   flutter_test:
